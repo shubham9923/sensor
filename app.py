@@ -38,7 +38,7 @@ def Pulse_rate():
 	database = 'COVID19-db' 
 	username = 'Ismiledb'  
 	password = 'Ismile@123' 
-	cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+	cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 	cursor = cnxn.cursor()
 	cursor.execute("SELECT TOP 1 * FROM SensorDetails ORDER BY Personid DESC")
 	row=cursor.fetchone()
